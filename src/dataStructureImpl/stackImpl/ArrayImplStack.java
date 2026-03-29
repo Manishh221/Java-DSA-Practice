@@ -1,15 +1,14 @@
 package dataStructureImpl.stackImpl;
 
-public class Stack {
+public class ArrayImplStack {
 
     private int size;
     private int[] stack;
     private int idx = -1;
-    private int data;
 
     public void push(int data) {
         if(isFull()){
-            System.out.println("Stack is full: ");
+            System.out.println("ArrayImplStack is full: ");
             return;
         }
         this.stack[++idx] = data;

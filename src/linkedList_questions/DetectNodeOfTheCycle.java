@@ -10,11 +10,26 @@ public class DetectNodeOfTheCycle {
     return the node where the cycle starts
      */
 
-    public static Node  detectNodeInACycle(Node head) {
+    public static Node detectNodeInACycle(Node head) {
         Node slow = head;
         Node fast = head;
+        Node temp = head;
 
-     return null;
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow.equals(fast)) break;
+
+        }
+
+        while (temp != null) {
+            slow = slow.next;
+            temp = temp.next;
+
+            if (slow.equals(temp)) return slow;
+
+        }
+        return temp;
     }
 
     public static void main(String[] args) {
@@ -30,6 +45,7 @@ public class DetectNodeOfTheCycle {
         Node head = list.getHeadNode();
 
         list.insertAtEnd(head.next.next.next);
+        System.out.println(detectNodeInACycle(head).data);
     }
 
 }

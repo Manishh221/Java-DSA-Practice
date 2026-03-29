@@ -6,7 +6,7 @@ import dataStructureImpl.linkedListImpl.Node;
 public class IsCycleInALinkedList {
 
     /*
-    find the cycle in the linked list return true or false is there any cycle or not
+    find the cycle in the linked list return true or false is there any cycle or not.
      */
     public static Boolean isCycleInALinkedList(Node head) {
 
@@ -36,7 +36,7 @@ public class IsCycleInALinkedList {
         list.insertAtEnd(5);
         list.insertAtEnd(6);
         list.insertAtEnd(7);
-        list.insertAtEnd(8);
+//        list.insertAtEnd(8);
 
         Node head = list.getHeadNode();
 

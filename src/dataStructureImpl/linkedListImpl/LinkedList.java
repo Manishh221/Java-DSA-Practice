@@ -2,8 +2,10 @@ package dataStructureImpl.linkedListImpl;
 
 public class LinkedList {
 
-    Node head;
-    Node tail;
+   public Node head;
+   public Node tail;
+   public int size = 0;
+
 
     // display Linked-List
     public void display() {
@@ -21,9 +23,11 @@ public class LinkedList {
         if (head == null) {
             head = newNode;
             tail = newNode;
+            size++;
         } else {
             tail.next = newNode;
             tail = newNode;
+            size++;
         }
     }
 
@@ -33,9 +37,11 @@ public class LinkedList {
         if (head == null) {
             head = node;
             tail = node;
+            size++;
         } else {
             tail.next = node;
             tail = node;
+            size++;
         }
     }
 
@@ -44,7 +50,9 @@ public class LinkedList {
         if (head.next == null) {
             head = null;
             tail = null;
+            size--;
             return temp;
+
         }
 
         while(temp.next.next != null) {
@@ -65,6 +73,7 @@ public class LinkedList {
         Node temp02 = temp.next;
         temp.next = newNode;
         newNode.next = temp02;
+        size++;
     }
 
     // insert at first of the linked-List
@@ -73,9 +82,11 @@ public class LinkedList {
         if (head == null) {
             head = newNode;
             tail = newNode;
+            size++;
         } else {
             newNode.next = head;
             head = newNode;
+            size++;
         }
     }
 
@@ -85,14 +96,17 @@ public class LinkedList {
         if (head != null) {
             if (idx == 0) {
                 head = head.next;
+                size--;
             }
             if (idx == 1) {
                 temp.next = temp.next.next;
+                size--;
             } else {
                 for (int i = 1; i < idx; i++) {
                     temp = temp.next;
                 }
                 temp.next = temp.next.next;
+                size--;
             }
         }
     }

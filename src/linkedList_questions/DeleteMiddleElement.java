@@ -3,26 +3,24 @@ package linkedList_questions;
 import dataStructureImpl.linkedListImpl.LinkedList;
 import dataStructureImpl.linkedListImpl.Node;
 
+public class DeleteMiddleElement {
 
-public class FindMiddleElement {
+    // taking middle left element:
 
-    /*
-    que - find the middle node in single traversal and return the node
-   1 for the even size we will consider left middle
-    */
-
-    public static Node findMiddleNode(Node head) {
+    public static Node deleteMiddleNode(Node head) {
 
         Node slow = head;
         Node fast = head;
 
-        while (fast.next != null && fast.next.next != null) {
+        while (fast.next.next.next != null && fast.next.next.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-
         }
-        return slow;
+
+        slow.next = slow.next.next;
+        return head;
     }
+
 
     public static void main(String[] args) {
 
@@ -36,8 +34,7 @@ public class FindMiddleElement {
         list.insertAtEnd(8);
 
         list.display();
-
-        System.out.println(findMiddleNode(list.getHeadNode()).data);
-
+        deleteMiddleNode(list.getHeadNode());
+        list.display();
     }
 }
