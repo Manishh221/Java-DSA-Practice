@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 
-// solve next greater element in O(n) time complexity;
+// solve next greater element in O(n) time complexity;   also if we dont able to find next greater element then put -1
 public class NextGreaterElement {
 
 
