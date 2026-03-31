@@ -44,15 +44,20 @@ public class NextGreaterElement {
 
         for (int i = arr.length - 2; i >= 0; i--) {
             if (arr[i] < stack.peek()) {
+
                 result[i] = stack.peek();
                 stack.push(arr[i]);
+
             } else {
+
                 while (!stack.isEmpty() && arr[i] > stack.peek()) {
                     stack.pop();
                 }
+
                     if (!stack.isEmpty()) {
                         result[i] = stack.peek();
                         stack.push(arr[i]);
+
                     } else {
                         result[i] = -1;
                         stack.push(arr[i]);

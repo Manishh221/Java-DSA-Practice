@@ -39,7 +39,6 @@ public class StackImplUsingLinkedList {
             size++;
 
         }
-
     }
 
     public int peek() {
@@ -64,6 +63,5 @@ public class StackImplUsingLinkedList {
         top = list.getTailNode() ;
         size--;
         return temp;
-
     }
 }
