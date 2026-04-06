@@ -7,12 +7,10 @@ public class FindAllTheIdxOfIntegerX {
         if (idx == arr.length) {
             return;
         }
-
         if (arr[idx] == x) {
             System.out.print(idx + " ");
         }
         findAllTheIdxOfIntegerX(arr, idx + 1, x);
-
 
     }
 

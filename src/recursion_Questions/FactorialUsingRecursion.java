@@ -12,7 +12,7 @@ public class FactorialUsingRecursion {
         return fact;
     }
 
-    static void main() {
+    public static void main(String[] args) {
 
         int fact = 4;
 

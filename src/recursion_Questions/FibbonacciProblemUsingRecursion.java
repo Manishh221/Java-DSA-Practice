@@ -10,18 +10,17 @@ public class FibbonacciProblemUsingRecursion {
         int ans;
 
         int prev = fib(n - 1);
-        int prevPrev = fib(n-2);
+        int prevPrev = fib(n - 2);
         ans = prev + prevPrev;
 
         return ans;
     }
 
-    static void main() {
+    public static void main(String[] args) {
 
-        int n = 5;
+        int n = 7;
 
         System.out.println(fib(n));
 
     }
-
 }
