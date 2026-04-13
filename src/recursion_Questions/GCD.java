@@ -15,12 +15,12 @@ public class GCD {
 
     public static void main(String[] args) {
 
-        int x = 5;
-        int y = 9;
+        int x = 3;
+        int y = 12;
 
-//        System.out.println(findGCDRecusion(x, y));
+        System.out.println(findGCDRecusion(x, y));
 
-        System.out.println(y/x);
+
 
     }
 
