@@ -1,11 +1,11 @@
-package dataStructureImpl.trees;
+package trees_questions;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
+import dataStructureImpl.trees.Node;
 
-public class Main {
+public class DiameterOfBinaryTree {
 
     public static void main(String[] args) {
+
         Node root = new Node(1);
         Node root2 = new Node(2);
         Node root3 = new Node(3);
@@ -21,7 +21,10 @@ public class Main {
         root3.leftNode = root6;
         root3.rightNode = root7;
 
-        root.bfs(root);
+    }
+
+    // diameter is the longest distance
+    public void diameterOfTheBinaryTree(Node root){
 
     }
 }
