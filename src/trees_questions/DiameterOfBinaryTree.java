@@ -4,8 +4,6 @@ import dataStructureImpl.trees.Node;
 
 public class DiameterOfBinaryTree {
 
-    public static int diameter = 0;
-
     public static void main(String[] args) {
 
         Node root = new Node(1);
@@ -24,7 +22,6 @@ public class DiameterOfBinaryTree {
         root3.rightNode = root7;
 
         System.out.println(diameterOfTheTree(root));
-
     }
 
     /*
