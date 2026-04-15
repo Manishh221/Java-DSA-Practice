@@ -28,6 +28,7 @@ public class DiameterOfBinaryTree {
      diameter is the Longest path between any two nodes in the tree -- we can solve by finding height of the left and right node's max height of the root.
      and diameter is calculated by on every node
      */
+
     public static int maxHeight(Node root) {
         if (root == null || root.leftNode==null && root.rightNode==null) return 0;  // height is counting as the edges so base case is valid if leaf node has no children then return 0
         int left = maxHeight(root.leftNode);

@@ -14,9 +14,9 @@ public class BalancedBinaryTree {
         Node node7 = new Node(7);
 
         root.leftNode = node1;
-//        root.rightNode = node2;
+        root.rightNode = node2;
         node1.leftNode = node3;
-//        node1.rightNode = node4;
+        node1.rightNode = node4;
         node2.leftNode = node6;
         node2.rightNode = node7;
 

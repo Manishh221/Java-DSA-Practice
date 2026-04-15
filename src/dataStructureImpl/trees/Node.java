@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class Node {
 
-    int data;
+    public int data;
 
     public Node leftNode;
 
@@ -14,6 +14,7 @@ public class Node {
     public Node(int data) {
         this.data = data;
     }
+    public Node(){}
 
     // display alll the child nodes of every nodes of the binary tree
     public void preOrderTraversaldisplayChildNodes(Node root) {
@@ -141,7 +142,7 @@ public class Node {
     // find level order traversal (BFS) using queue DS
     public void bfs(Node root) {   // iterative way to level order traversal:
         Queue<Node> queue = new LinkedList<>();
-       if (root!= null) queue.add(root);
+        if (root != null) queue.add(root);
 
         while (!queue.isEmpty()) {
             Node node = queue.peek();
