@@ -5,7 +5,8 @@ import dataStructureImpl.trees.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RootToNodePaths {
+// find all the paths from leaf node to root:
+public class LeafNodeToRootPath {
 
     public static void main(String[] args) {
 
@@ -23,22 +24,24 @@ public class RootToNodePaths {
         node2.rightNode = node6;
 
         List<String> result = new ArrayList<>();
-        System.out.println(findRootToLeafNodePath(rootNode, result, ""));
-
+        System.out.println(findLeafNodeToRootPath(rootNode, result, ""));
     }
 
-    // find all the paths from root to leaf Node
-    public static List<String> findRootToLeafNodePath(Node root, List<String> result, String str) {
-        if (root == null) return result;
+    // find the all the paths from leaf node to root:
+    public static List<String> findLeafNodeToRootPath(Node root, List<String> result, String s) {
 
+        if (root == null) return result;
         if (root.leftNode == null && root.rightNode == null) {
-            result.add( str + root.data);
+            result.add(root.data + "->" + s);
             return result;
         }
-
-        str += root.data + "->";
-        result = findRootToLeafNodePath(root.leftNode, result, str);
-        result = findRootToLeafNodePath(root.rightNode, result, str);
+        if (s.isEmpty()) {
+            s = root.data + s;
+        } else {
+            s = root.data + "->" + s;
+        }
+        findLeafNodeToRootPath(root.leftNode, result, s);
+        findLeafNodeToRootPath(root.rightNode, result, s);
         return result;
     }
 }

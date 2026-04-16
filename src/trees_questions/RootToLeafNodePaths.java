@@ -5,7 +5,7 @@ import dataStructureImpl.trees.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NodeToRootPath {
+public class RootToLeafNodePaths {
 
     public static void main(String[] args) {
 
@@ -23,21 +23,21 @@ public class NodeToRootPath {
         node2.rightNode = node6;
 
         List<String> result = new ArrayList<>();
-        System.out.println(findLeafNodeToRootPath(rootNode, result, ""));
+        System.out.println(findRootToLeafNodePath(rootNode, result, ""));
+
     }
 
-    public static List<String> findLeafNodeToRootPath(Node root, List<String> result, String s) {
+    // find all the paths from root to leaf Node
+    public static List<String> findRootToLeafNodePath(Node root, List<String> result, String str) {
         if (root == null) return result;
+
         if (root.leftNode == null && root.rightNode == null) {
-            result.add(s += root.data);
+            result.add( str + root.data);
             return result;
         }
-
-        findLeafNodeToRootPath(root.leftNode, result, s);
-
-        findLeafNodeToRootPath(root.rightNode, result, s);
-
+        str += root.data + "->";
+        result = findRootToLeafNodePath(root.leftNode, result, str);
+        result = findRootToLeafNodePath(root.rightNode, result, str);
         return result;
     }
-
 }

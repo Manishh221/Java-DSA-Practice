@@ -24,7 +24,6 @@ public class BalancedBinaryTree {
 
     }
 
-
     public static int height(Node root) {
         if (root == null|| root.leftNode==null && root.rightNode==null) return 0;
         int leftHeight = height(root.leftNode);
