@@ -3,7 +3,10 @@ package trees_questions;
 import dataStructureImpl.trees.Node;
 
 import java.util.*;
-
+/*
+A binary tree is infected starting from a given node. Every second, infection spreads to adjacent nodes (left, right, and parent).
+Find the total time to infect the whole tree.
+ */
 public class TimeTakenToInfectNodes {
 
     public static void main(String[] args) {
@@ -22,9 +25,11 @@ public class TimeTakenToInfectNodes {
         node1.rightNode = node4;
         node2.leftNode = node6;
         node2.rightNode = node7;
+
         System.out.println(ammountOfTime(root, 1));
     }
 
+    // BFS traversal:
     public static int ammountOfTime(Node root, int startingNode) {
         Node node = geteNode(root, startingNode);
         Map<Node, Node> parentChildMapping = new HashMap<>();
@@ -60,6 +65,7 @@ public class TimeTakenToInfectNodes {
         return time;
     }
 
+    // map all childs to the parent
     private static void preOrder(Node root, Map<Node, Node> parentChildMapping) {
         if (root == null) return;
         if (root.leftNode != null) parentChildMapping.put(root.leftNode, root);
@@ -68,6 +74,7 @@ public class TimeTakenToInfectNodes {
         preOrder(root.rightNode, parentChildMapping);
     }
 
+    // get the starting node
     public static Node geteNode(Node root, int start) {
         if (root == null) return null;
         if (root.data == start) {
