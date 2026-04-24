@@ -13,7 +13,6 @@ public class CheckPalindromicString {
         if (s.charAt(a) != s.charAt(l)){
             flag = false;
         }
-
         checkPalindrom(s,a+1,l-1);
 
            return flag;

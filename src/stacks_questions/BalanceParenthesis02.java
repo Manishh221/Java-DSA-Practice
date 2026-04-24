@@ -4,7 +4,8 @@ import java.util.Stack;
 
 /*
 Find the minimum number of brackets that we need to remove to make the given bracket sequence balanced
- */
+*/
+
 public class BalanceParenthesis02 {
 
     public static int needTORemoveNumberOfParenthesis(String str) {
@@ -27,7 +28,7 @@ public class BalanceParenthesis02 {
 
     public static void main(String[] args) {
 
-        String str =")())()))";
+        String str =")())())()";
 
         System.out.println(needTORemoveNumberOfParenthesis(str));
 

@@ -9,12 +9,10 @@ public class ReverseString {
         if (a>b){
             return;
         }
-
         System.out.println(Arrays.toString(str) + " ");
         char temp = str[a];
         str[a] = str[b];
         str[b] = temp;
-
         reverseString(str, a+1, b-1);
     }
 

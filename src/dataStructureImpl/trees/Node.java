@@ -37,10 +37,9 @@ public class Node {
     // Traveling each and every Node preOrder inn the binary tree:
     public void preOrderTraversal(Node root) {
         if (root == null) return;
-
+        System.out.println(root.data);
         preOrderTraversal(root.leftNode);
         preOrderTraversal(root.rightNode);
-        System.out.println(root.data);
     }
 
     // Traveling each and every Node inOrder inn the binary tree:
@@ -140,7 +139,7 @@ public class Node {
     }
 
     // find level order traversal (BFS) using queue DS
-    public void bfs(Node root) {   // iterative way to level order traversal:
+    public void levelOrderTraversal(Node root) {   // iterative way to level order traversal:
         Queue<Node> queue = new LinkedList<>();
         if (root != null) queue.add(root);
 

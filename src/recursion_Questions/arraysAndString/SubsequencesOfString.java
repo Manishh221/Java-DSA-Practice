@@ -1,6 +1,7 @@
 package recursion_Questions.arraysAndString;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SubsequencesOfString {
 
@@ -21,25 +22,26 @@ public class SubsequencesOfString {
         return ans;
     }
 
-
-//    better approach:
-    static void printSSQ(String s, String currAns) {   // abc, ""
+    //    better approach:
+    static List<String> printSSQ(String s, String currAns, List<String> list) {   // abc, ""
         if (s.isEmpty()) {
-            System.out.print(currAns + " ");
-            return;
+            list.add(currAns + " ");
+            return list;
         }
         char curr = s.charAt(0);
         String remString = s.substring(1);
-        printSSQ(remString, currAns + curr); // include current
-        printSSQ(remString, currAns); //exclude current
+        printSSQ(remString, currAns + curr, list); // include current
+        printSSQ(remString, currAns, list); //exclude current
+        return list;
     }
-
 
     public static void main(String[] args) {
         String str = "abc";
+        List<String> list = new ArrayList<>();
 //        System.out.print(subsequences(str));
-        printSSQ(str, "");
+        printSSQ(str, "", list);
 
+        System.out.println(list);
 
     }
 }

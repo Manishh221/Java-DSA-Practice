@@ -9,14 +9,12 @@ public class Permutation {
         List<String> al = new ArrayList<>();
         permutation(s, "", al);
         System.out.println(al);
-
     }
 
     private static void permutation(String s, String s1, List<String> al) {
         if (s.length() == 0) {
             al.add(s1);
         }
-
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             String left = s.substring(0, i);

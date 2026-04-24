@@ -18,11 +18,11 @@ public class PrefixSumIn2DArray {
 
         if (columnOrRow.equals("columns")) {
             for (int i = 0; i < arr.length; i++) {
-
                 for (int j = 1; j < arr[i].length; j++) {
                     arr[i][j] = arr[i][j - 1] + arr[i][j];
                 }
             }
+
         } else if(columnOrRow.equals("rows")){
             for (int i = 1; i <arr.length; i++) {
                 for (int j = 0; j < arr[i].length; j++) {
@@ -67,13 +67,11 @@ public class PrefixSumIn2DArray {
             sum += arr[l2][r2] -  arr[l1-1][r2] - arr[l2][r1-1] + arr[l1-1][r1-1];
 
         }
-
         System.out.println(sum);
 
     }
 
 //  02  optimised approach better than brutforce first find the all the prefix sum of every row and than minus the [i][r1-1]
-
     public static void prefixSumQuery02(int arr[][]){
 
         int l1, r1, l2, r2;

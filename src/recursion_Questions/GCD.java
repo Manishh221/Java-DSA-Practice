@@ -14,14 +14,10 @@ public class GCD {
     }
 
     public static void main(String[] args) {
-
         int x = 3;
         int y = 12;
 
         System.out.println(findGCDRecusion(x, y));
-
-
-
     }
 
     public static void GCDIterative(int x, int y) {

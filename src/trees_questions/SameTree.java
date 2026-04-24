@@ -38,14 +38,14 @@ public class SameTree {
         node9.rightNode = node13;
 
 
-        System.out.println(isSameTree(root,root2));
+        System.out.println(isSameTree(root, root2));
 
     }
 
-    public static Boolean isSameTree(Node roo1, Node root2){
-        if (roo1 == null &&  root2==null) return true;
-        if (roo1==null || root2==null) return false;
+    public static Boolean isSameTree(Node roo1, Node root2) {
+        if (roo1 == null && root2 == null) return true;
+        if (roo1 == null || root2 == null) return false;
         if (roo1.data != root2.data) return false; // VIMP
-      return isSameTree(roo1.leftNode, root2.leftNode) && isSameTree(roo1.rightNode, root2.rightNode);
+        return isSameTree(roo1.leftNode, root2.leftNode) && isSameTree(roo1.rightNode, root2.rightNode);
     }
 }

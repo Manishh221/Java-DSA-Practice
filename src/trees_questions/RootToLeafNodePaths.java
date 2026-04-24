@@ -32,7 +32,7 @@ public class RootToLeafNodePaths {
         if (root == null) return result;
 
         if (root.leftNode == null && root.rightNode == null) {
-            result.add( str + root.data);
+            result.add(str + root.data);
             return result;
         }
         str += root.data + "->";

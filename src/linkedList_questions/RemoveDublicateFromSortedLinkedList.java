@@ -13,23 +13,18 @@ public class RemoveDublicateFromSortedLinkedList {
         Node slow = head.next;
 
         while (slow != null) {
-
             if (temp.data == slow.data) {
                 slow = slow.next;
-
             } else {
                 temp.next = slow;
                 temp = slow;
                 slow = slow.next;
             }
-
             if (slow == null) {
                 temp.next = null;
             }
         }
-
         printLL(head);
-
     }
 
     public static void main(String[] args) {
@@ -53,7 +48,6 @@ public class RemoveDublicateFromSortedLinkedList {
     }
 
     public static void printLL(Node head) {
-
         while (head != null) {
             System.out.print(head.data + " ");
             head = head.next;

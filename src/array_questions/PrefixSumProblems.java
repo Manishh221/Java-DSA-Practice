@@ -89,7 +89,6 @@ public static boolean twoSubArrayWithEqualSum(int arr[]){
    public static void main(String[] args) {
 
         int arr[] = {1,2,3,4,5,6};
-
         int rangeArr[] = {0,1,2,3,4,5,6};
 
         System.out.println(twoSubArrayWithEqualSum(arr));

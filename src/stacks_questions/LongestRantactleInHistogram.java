@@ -57,10 +57,8 @@ public class LongestRantactleInHistogram {
             }
             st.push(i);
         }
-
         return ans;
     }
-
 
     public static int findAreaOfRant(int height[],int[] NSE, int max, int[] PSE) {
 
@@ -71,7 +69,6 @@ public class LongestRantactleInHistogram {
         return max;
     }
 
-
     public static void main(String[] args) {
 
         int arr[] = {2,1,5,6,2,3};
@@ -81,6 +78,5 @@ public class LongestRantactleInHistogram {
 //        System.out.println(Arrays.toString(NSE));
 //        System.out.println(Arrays.toString(PSE));
         System.out.println(findAreaOfRant(arr,NSE,-1, PSE));
-
     }
 }

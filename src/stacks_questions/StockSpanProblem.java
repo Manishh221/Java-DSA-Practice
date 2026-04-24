@@ -12,7 +12,6 @@ Also, if the prices of the stock in the last four days is [7,34,1,2] and the pri
 Span = Aaj se peeche kitne consecutive days
        ka price aaj ke price se CHHOTA ya EQUAL hai
        (aaj ka din bhi count hoga)
-
  */
 
 public class StockSpanProblem {
@@ -25,30 +24,24 @@ public class StockSpanProblem {
         result[0] = 1;
 
         for (int i = 1; i < arr.length; i++) {
-
             while (!st.isEmpty() && arr[i] >= arr[st.peek()]) {
                 st.pop();
             }
-
             if (st.isEmpty()) {
                 result[i] = 1;    // no greater element is found;
             } else {
                 result[i] = i - st.peek();
             }
             st.push(i);
-
         }
-
         printArr(result);
-
     }
 
-
     public static void main(String[] args) {
-
         int arr[] = {100, 80, 60, 70, 60, 70, 80};
+        printArr(arr);
+        System.out.println();
         stockSpanProblem(arr);
-
     }
 
     public static void printArr(int arr[]) {

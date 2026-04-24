@@ -1,8 +1,5 @@
 package dataStructureImpl.trees;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -21,7 +18,7 @@ public class Main {
         root3.leftNode = root6;
         root3.rightNode = root7;
 
-        root.bfs(root);
+        root.levelOrderTraversal(root);
 
     }
 }

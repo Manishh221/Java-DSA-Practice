@@ -17,7 +17,6 @@ public class PalindromLinkedList {
             prev = curr;
             curr = Next;
         }
-
         return prev;
     }
 
@@ -35,9 +34,7 @@ public class PalindromLinkedList {
                 break;
             }
         }
-
         Node tempNode = reverseList(slow.next);
-
         Node p1 = head;
         slow.next = tempNode;
         Node p2 = slow.next;
@@ -50,7 +47,6 @@ public class PalindromLinkedList {
             p1 = p1.next;
             p2 = p2.next;
         }
-
         return flag;
     }
 

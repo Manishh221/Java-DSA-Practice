@@ -28,13 +28,11 @@ public class MergeTwoSortedLinkedList {
                 tempA = tempA.next;
             }
         }
-
         if (tempA != null) {
             ansNode.next = tempA;
         } else {
             ansNode.next = tempB;
         }
-
         newNode = newNode.next;
         return newNode;
     }
@@ -61,15 +59,15 @@ public class MergeTwoSortedLinkedList {
         }
     }
 
-    public static Node mergeTwoSortedListWithoutUsingExtraSpace(Node head1, Node head2){
+    public static Node mergeTwoSortedListWithoutUsingExtraSpace(Node head1, Node head2) {
 
         Node temp1 = head1;
         Node temp2 = head2;
         Node head = new Node(0);
         Node t1 = head;
 
-        while (temp1 != null && temp2 != null){
-            if (temp1.data > temp2.data){
+        while (temp1 != null && temp2 != null) {
+            if (temp1.data > temp2.data) {
                 t1.next = temp2;
                 t1 = temp2;
                 temp2 = temp2.next;
@@ -80,11 +78,11 @@ public class MergeTwoSortedLinkedList {
             }
         }
 
-   if(temp1 != null){
-       t1.next = temp1;
-   } else {
-       t1.next = temp2;
-   }
+        if (temp1 != null) {
+            t1.next = temp1;
+        } else {
+            t1.next = temp2;
+        }
         return head.next;
     }
 }

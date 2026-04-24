@@ -10,9 +10,7 @@ public class FindIntersactionOfTwoLinkedList {
     steps: first find the length of the both the list;
            second then is l1 is greater then move the l1 head with the dif value or same if l2 is greater then move l2 with dif value
            run a while loop with two pointers and check where the node is equal and return the node:
-
  */
-
 
     public static Node findIntersactionOfTwoLinkedList(Node head1, Node head2) {
 
@@ -25,12 +23,10 @@ public class FindIntersactionOfTwoLinkedList {
             l1Length++;
             tempNode01 = tempNode01.next;
         }
-
         while (tempNode02.next != null) {
             l2Length++;
             tempNode02 = tempNode02.next;
         }
-
         tempNode01 = head1;
         tempNode02 = head2;
 
@@ -45,7 +41,6 @@ public class FindIntersactionOfTwoLinkedList {
                 tempNode02 = tempNode02.next;
             }
         }
-
         while (!tempNode01.equals(tempNode02)) {
             tempNode01 = tempNode01.next;
             tempNode02 = tempNode02.next;
@@ -62,20 +57,14 @@ public class FindIntersactionOfTwoLinkedList {
         list.insertAtEnd(5);
         list.insertAtEnd(6);
         list.insertAtEnd(7);
-
         list.display();
-
         Node l1Head = list.getHeadNode();
-
         LinkedList list2 = new LinkedList();
         list2.insertAtEnd(8);
         list2.insertAtEnd(9);
         list2.insertAtEnd(l1Head.next.next.next.next);
-
         Node l2Head = list2.getHeadNode();
-
         list2.display();
-
         System.out.println(findIntersactionOfTwoLinkedList(l1Head, l2Head).data);
     }
 }

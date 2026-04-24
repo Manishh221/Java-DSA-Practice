@@ -30,20 +30,32 @@ public class DiameterOfBinaryTree {
      */
 
     public static int maxHeight(Node root) {
-        if (root == null || root.leftNode==null && root.rightNode==null) return 0;  // height is counting as the edges so base case is valid if leaf node has no children then return 0
+        if (root == null || root.leftNode == null && root.rightNode == null)
+            return 0;  // height is counting as the edges so base case is valid if leaf node has no children then return 0
         int left = maxHeight(root.leftNode);
         int right = maxHeight(root.rightNode);
-        return 1+ Math.max(left,right);
+        return 1 + Math.max(left, right);
     }
 
-    public static int diameterOfTheTree(Node root){
-        if (root==null || root.leftNode==null && root.rightNode==null) return 0;
-       int leftRoot = diameterOfTheTree(root.leftNode);
-       int rightNode = diameterOfTheTree(root.rightNode);
-       int mid = maxHeight(root.leftNode) + maxHeight(root.rightNode);
-       if (root.leftNode!=null) mid++;
-       if (root.rightNode!=null) mid++;
-       int max = Math.max(mid, Math.max(leftRoot, rightNode));
-       return max;
+    public static int diameterOfTheTree(Node root) {
+        if (root == null || root.leftNode == null && root.rightNode == null) return 0;
+        int leftRoot = diameterOfTheTree(root.leftNode);
+        int rightNode = diameterOfTheTree(root.rightNode);
+        int mid = maxHeight(root.leftNode) + maxHeight(root.rightNode);
+        if (root.leftNode != null) mid++;
+        if (root.rightNode != null) mid++;
+        int max = Math.max(mid, Math.max(leftRoot, rightNode));
+        return max;
     }
+
+    static int diameter = 0;
+
+    public static int optimized(Node root) {
+        if (root == null) return 0;
+        int left  = optimized(root.leftNode);
+        int right = optimized(root.rightNode);
+        diameter = Math.max(diameter, left + right); // update diameter
+        return 1 + Math.max(left, right);            // return height
+    }
+
 }

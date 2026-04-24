@@ -9,18 +9,22 @@ public class DeleteMiddleElement {
 
     public static Node deleteMiddleNode(Node head) {
 
+        if (head == null || head.next == null)
+            return null;
+
         Node slow = head;
         Node fast = head;
 
-        while (fast.next.next.next != null && fast.next.next.next.next != null) {
+        while (fast.next.next != null && fast.next.next.next != null) {
+
             slow = slow.next;
             fast = fast.next.next;
         }
 
         slow.next = slow.next.next;
+
         return head;
     }
-
 
     public static void main(String[] args) {
 
