@@ -33,7 +33,6 @@ public class InvertBinaryTree {
         Node temp = root.leftNode;
         root.leftNode = root.rightNode;
         root.rightNode = temp;
-
         return root;
     }
 }

@@ -37,7 +37,7 @@ public class Node {
     // Traveling each and every Node preOrder inn the binary tree:
     public void preOrderTraversal(Node root) {
         if (root == null) return;
-        System.out.println(root.data);
+        System.out.print(root.data + " ");
         preOrderTraversal(root.leftNode);
         preOrderTraversal(root.rightNode);
     }

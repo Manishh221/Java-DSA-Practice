@@ -50,7 +50,7 @@ public class TimeTakenToInfectNodes {
                 queue.add(temp.rightNode);
                 isVisited.put(temp.rightNode, level + 1);
             }
-            if (parentChildMapping.containsKey(temp) && !parentChildMapping.containsKey(parentChildMapping.get(temp))) {
+            if (parentChildMapping.containsKey(temp) && !isVisited.containsKey(parentChildMapping.get(temp))) {
                 queue.add(parentChildMapping.get(temp));
                 isVisited.put(parentChildMapping.get(temp), level + 1);
             }
