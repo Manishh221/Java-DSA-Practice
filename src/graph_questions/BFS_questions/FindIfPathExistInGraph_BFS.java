@@ -7,7 +7,7 @@ public class FindIfPathExistInGraph_BFS {
 
         int arr[][] = {{0,1},{4,1},{1,2},{2,3},{7,5},{6,7}};
         int origin = 0;
-        int destination = 5;
+        int destination = 1;
         int n = 8;
         System.out.println(validPath(n,arr,origin,destination));
     }

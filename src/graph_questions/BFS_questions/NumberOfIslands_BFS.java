@@ -71,11 +71,11 @@ public class NumberOfIslands_BFS {
             if (tempCol + 1 < c &&
                     grid[tempRow][tempCol + 1] == '1' &&
                     !visited[tempRow][tempCol + 1]) {
-
                 q.add(List.of(tempRow, tempCol + 1));
                 visited[tempRow][tempCol + 1] = true;
             }
         }
     }
+
 }
 

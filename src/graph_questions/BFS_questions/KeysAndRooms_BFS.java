@@ -2,7 +2,7 @@ package graph_questions.BFS_questions;
 
 import java.util.*;
 
-public class KeysAndRoomsBFS_BFS {
+public class KeysAndRooms_BFS {
 
     public static void main(String[] args) {
         List<List<Integer>> adjecencyList = new ArrayList<>();
