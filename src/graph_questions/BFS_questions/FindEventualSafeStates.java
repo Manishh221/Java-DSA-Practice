@@ -11,20 +11,19 @@ public class FindEventualSafeStates {
       List<List<Integer>> reversedGraph = reverseGraphEdges(graph, inDegree);
         System.out.println("In Degree: " + Arrays.toString(inDegree));
         List<Integer> ans = new ArrayList<>();
-        BSF(reversedGraph,inDegree,ans);
+        BSF_Kahns_Algorithm(reversedGraph,inDegree,ans);
         System.out.println("reversed Graph: " + reversedGraph);
         Collections.sort(ans);
         System.out.println("ans array: " + ans);
     }
 
 
-    public static void BSF(List<List<Integer>> reversedGraph, int[] indegree, List<Integer> ans){
+    public static void BSF_Kahns_Algorithm(List<List<Integer>> reversedGraph, int[] indegree, List<Integer> ans){
 
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < reversedGraph.size() ; i++) {
             if (indegree[i] == 0) queue.add(i);
         }
-
         while(!queue.isEmpty()){
             int front = queue.poll();
             ans.add(front);

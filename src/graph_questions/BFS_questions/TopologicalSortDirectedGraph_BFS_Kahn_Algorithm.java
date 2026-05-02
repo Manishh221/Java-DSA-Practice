@@ -10,11 +10,8 @@ public class TopologicalSortDirectedGraph_BFS_Kahn_Algorithm {
         int inDigree[] = new int[n];
 
         List<List<Integer>> adjacencyList = createAdjacencyList(que,inDigree, n);
-
         List<Integer> ans = new ArrayList<>();
-
         System.out.println("InDegree Array: " + Arrays.toString(inDigree));
-
             BFS(adjacencyList,inDigree,ans,n);
 
         int result[] = ans.stream()
@@ -49,6 +46,7 @@ public class TopologicalSortDirectedGraph_BFS_Kahn_Algorithm {
         for (int i = 0; i < n; i++) {
             ans.add(new ArrayList<>());
         }
+
         for (int i = 0; i < prerequisites.length; i++) {
             int a = prerequisites[i][0];
             int b = prerequisites[i][1];

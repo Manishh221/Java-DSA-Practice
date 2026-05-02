@@ -2,7 +2,7 @@ package graph_questions.BFS_questions;
 
 import java.util.*;
 
-public class CycleDetectionDirectedGraph {
+public class CycleDetectionDirectedGraph_BFS_Kahns_Algorithm {
     public static void main(String[] args) {
 
 

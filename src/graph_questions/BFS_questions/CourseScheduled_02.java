@@ -8,7 +8,6 @@ public class CourseScheduled_02 {
         int[][] que = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
         int n = 4;
         System.out.println(Arrays.toString(courseSchedule(que, n)));
-
     }
 
 
