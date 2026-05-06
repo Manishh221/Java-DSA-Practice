@@ -31,10 +31,12 @@ public class LeafNodeToRootPath {
     public static List<String> findLeafNodeToRootPath(Node root, List<String> result, String s) {
 
         if (root == null) return result;
+
         if (root.leftNode == null && root.rightNode == null) {
             result.add(root.data + "->" + s);
             return result;
         }
+
         if (s.isEmpty()) {
             s = root.data + s;
         } else {

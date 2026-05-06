@@ -2,6 +2,7 @@ package trees_questions;
 
 import dataStructureImpl.trees.Node;
 
+// A tree is balanced when difference of height of left and right node not greater than 1
 public class BalancedBinaryTree {
     public static void main(String[] args) {
 

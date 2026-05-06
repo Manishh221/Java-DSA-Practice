@@ -4,7 +4,7 @@ import dataStructureImpl.trees.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+// print level order traversel using queue:
 public class LevelOrderTraversal {
 
     public static void main(String[] args) {

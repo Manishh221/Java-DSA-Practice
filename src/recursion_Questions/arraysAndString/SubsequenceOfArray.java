@@ -5,13 +5,6 @@ import java.util.List;
 
 public class SubsequenceOfArray {
 
-    public static List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> resultList = new ArrayList<>();
-// Start backtracking from the beginning
-        backtrack(resultList, new ArrayList<>(), nums, 0);
-        return resultList;
-    }
-
     private static void backtrack(List<List<Integer>> resultSets,
                                   List<Integer> tempSet,
                                   int[] nums, int start) {

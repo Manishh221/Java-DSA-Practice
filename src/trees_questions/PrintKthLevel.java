@@ -2,10 +2,11 @@ package trees_questions;
 
 import dataStructureImpl.trees.Node;
 
+
+// print the node data of kth level
 public class PrintKthLevel {
 
     public static void main(String[] args) {
-
 
         Node root = new Node(1);
         Node node1 = new Node(2);

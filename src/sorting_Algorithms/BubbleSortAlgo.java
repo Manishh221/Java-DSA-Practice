@@ -39,19 +39,16 @@ public class BubbleSortAlgo {
                     flag = true;
                 }
             }
-
             if (!flag){   // have any swap happen:
                 break;
             }
         }
         printArray(arr);
-
     }
 
     public static void main(String[] args) {
 
         int arr[] = {1, 5, 3, 7, 4, 9, 5, 6};
-
 //        optimisedApproachForBubbleSort(arr);
  bubbleSort(arr);
     }

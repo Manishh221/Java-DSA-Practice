@@ -1,9 +1,10 @@
 package trees_questions;
 
+import dataStructureImpl.linkedListImpl.LinkedList;
 import dataStructureImpl.trees.Node;
 
 import javax.swing.tree.TreeNode;
-
+// convert the binary treee into flatten linked list:
 public class FlattenBinaryTreeToLinkedList {
 
     public static void main(String[] args) {
@@ -23,31 +24,33 @@ public class FlattenBinaryTreeToLinkedList {
         node2.leftNode = node6;
         node2.rightNode = node7;
 
+        flatten(root);
     }
 
-    private static void flattenHelper(Node root) {
+    public static void flatten(Node root) {
         if (root == null) return;
+
         Node left = root.leftNode;
         Node right = root.rightNode;
 
-        flattenHelper(left);
-        flattenHelper(right);
+        flatten(root.leftNode);
+        flatten(root.rightNode);
 
-        root.rightNode = left;
+
         root.leftNode = null;
-        Node temp = left;
+        root.rightNode = left;
 
-        while(temp!=null && temp.rightNode !=null){
-            temp = temp.rightNode;
+        // go to end of new right
+        Node curr = root;
+        while (curr.rightNode != null) {
+            curr = curr.rightNode;
         }
-        if (temp!=null) temp.rightNode = right;
-        else{
-            root.rightNode = right;
-        }
+
+        curr.rightNode = right;
     }
 
     // iterative approach with O(1) space, better approach
-    public static void flatten(Node root) {
+    public static void flattenItr(Node root) {
         Node curr = root;
         while (curr != null) {
             if (curr.leftNode != null) {

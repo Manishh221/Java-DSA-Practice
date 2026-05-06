@@ -3,7 +3,7 @@ package trees_questions;
 
 import dataStructureImpl.trees.Node;
 
-// check the two trees are exactly same or not:
+// check the two trees are exactly same or not: with their values and their node all the thing should be same:
 public class SameTree {
     public static void main(String[] args) {
 

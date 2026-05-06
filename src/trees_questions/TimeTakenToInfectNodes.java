@@ -42,14 +42,17 @@ public class TimeTakenToInfectNodes {
         while (!queue.isEmpty()) {
             Node temp = queue.peek();
             int level = isVisited.get(temp);
+            // visit left node
             if (temp.leftNode != null && !isVisited.containsKey(temp.leftNode)) {
                 queue.add(temp.leftNode);
                 isVisited.put(temp.leftNode, level + 1);
             }
+            // visit right node
             if (temp.rightNode != null && !isVisited.containsKey(temp.rightNode)) {
                 queue.add(temp.rightNode);
                 isVisited.put(temp.rightNode, level + 1);
             }
+            // visit parent node
             if (parentChildMapping.containsKey(temp) && !isVisited.containsKey(parentChildMapping.get(temp))) {
                 queue.add(parentChildMapping.get(temp));
                 isVisited.put(parentChildMapping.get(temp), level + 1);
@@ -61,7 +64,6 @@ public class TimeTakenToInfectNodes {
         for (int result : isVisited.values()) {
            time = Math.max(result, time);
             }
-
         return time;
     }
 

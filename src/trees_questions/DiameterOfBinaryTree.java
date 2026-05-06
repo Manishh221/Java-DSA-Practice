@@ -21,7 +21,9 @@ public class DiameterOfBinaryTree {
         root3.leftNode = root6;
         root3.rightNode = root7;
 
-        System.out.println(diameterOfTheTree(root));
+        optimized(root);
+        System.out.println(diameter);
+
     }
 
     /*
@@ -50,6 +52,7 @@ public class DiameterOfBinaryTree {
 
     static int diameter = 0;
 
+    // optimised == O(N)
     public static int optimized(Node root) {
         if (root == null) return 0;
         int left  = optimized(root.leftNode);
@@ -57,5 +60,4 @@ public class DiameterOfBinaryTree {
         diameter = Math.max(diameter, left + right); // update diameter
         return 1 + Math.max(left, right);            // return height
     }
-
 }

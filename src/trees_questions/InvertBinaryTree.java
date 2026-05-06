@@ -2,6 +2,7 @@ package trees_questions;
 
 import dataStructureImpl.trees.Node;
 
+// a inverted binary tree means swap their child from left to right:
 public class InvertBinaryTree {
 
     public static void main(String[] args) {

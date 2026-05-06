@@ -5,6 +5,15 @@ import dataStructureImpl.trees.Node;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/*
+Zigzag traversal (also called spiral traversal) is a level order traversal where direction alternates at each level:
+
+Level 1 → Left ➝ Right
+Level 2 → Right ➝ Left
+Level 3 → Left ➝ Right
+…and so on
+ */
 public class ZigZagLevelOrderTraversal {
 
     public static void main(String[] args) {

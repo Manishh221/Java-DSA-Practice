@@ -4,7 +4,7 @@ import dataStructureImpl.trees.Node;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// find all the paths of the node where sum is equal to the target and return the list of the paths
 public class PathSum_2 {
 
     public static void main(String[] args) {

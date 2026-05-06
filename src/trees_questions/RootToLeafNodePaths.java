@@ -4,7 +4,7 @@ import dataStructureImpl.trees.Node;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// print all the values from root to leaf node:
 public class RootToLeafNodePaths {
 
     public static void main(String[] args) {

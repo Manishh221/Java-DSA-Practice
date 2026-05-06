@@ -37,7 +37,6 @@ public class PathSum {
         if (root.leftNode == null && root.rightNode == null) {
             return sum == targetSum;
         }
-
         return checkSum(root.leftNode, targetSum, sum) || checkSum(root.rightNode, targetSum, sum);
     }
 }

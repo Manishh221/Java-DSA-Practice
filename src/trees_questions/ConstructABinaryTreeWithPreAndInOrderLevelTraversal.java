@@ -10,40 +10,13 @@ public class ConstructABinaryTreeWithPreAndInOrderLevelTraversal {
         int preOrder[] = {1, 2, 4, 5, 3, 6};
         int inOrder[] = {4, 2, 5, 1, 3, 6};
 
-    }
-    public static Node buildTree(int[] preorder, int[] inorder,
-                                 int preStart, int preEnd,
-                                 int inStart, int inEnd) {
-        // base case
-        if (preStart > preEnd || inStart > inEnd) return null;
+        Node node = buildTree(preOrder, inOrder);
 
-        // Step 1 - pick root from preorder
-        Node root = new Node(preorder[preStart]);
+        LevelOrderTraversal.bfs(node);
 
-        // Step 2 - find root in inorder
-        int rootIndex = 0;
-        for (int i = inStart; i <= inEnd; i++) {
-            if (inorder[i] == root.data) {
-                rootIndex = i;
-                break;
-            }
-        }
-
-        // Step 3 - count left subtree nodes
-        int leftCount = rootIndex - inStart;
-
-        // Step 4 - recurse left and right
-        root.leftNode = buildTree(preorder, inorder,
-                preStart + 1, preStart + leftCount,
-                inStart, rootIndex - 1);
-
-        root.rightNode = buildTree(preorder, inorder,
-                preStart + leftCount + 1, preEnd,
-                rootIndex + 1, inEnd);
-        return root;
     }
 
-    public static Node buildTree02(int[] preorder, int[] inorder) {
+    public static Node buildTree(int[] preorder, int[] inorder) {
         // Step 1 - build hashmap
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {
