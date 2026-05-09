@@ -33,7 +33,7 @@ public class MinCostFrogJump {
 
         int stones[] = {10,30,40,20};
         int idx = 0;
-//        System.out.println(best(stones, stones.length, idx));
+        System.out.println(best(stones, stones.length, idx));
 
         System.out.println(idx++);
         System.out.println(idx);

@@ -1,4 +1,4 @@
-package recursion_Questions.arraysAndString;
+package recursion_Questions.recursionOnArrays;
 
 import java.util.ArrayList;
 import java.util.List;

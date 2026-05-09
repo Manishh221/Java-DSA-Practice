@@ -5,7 +5,6 @@ import java.util.*;
 public class CycleDetectionDirectedGraph_BFS_Kahns_Algorithm {
     public static void main(String[] args) {
 
-
         int[][] que = {{0,1}, {1, 2},{1,3}, {2, 3}, {2,4},{4,3}};
         int n = 5;
         int inDigree[] = new int[n];

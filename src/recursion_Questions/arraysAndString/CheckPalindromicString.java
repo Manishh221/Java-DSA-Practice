@@ -9,7 +9,6 @@ public class CheckPalindromicString {
         if (a>l){
           return flag;
         }
-
         if (s.charAt(a) != s.charAt(l)){
             flag = false;
         }

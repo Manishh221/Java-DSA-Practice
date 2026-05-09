@@ -22,7 +22,6 @@ public class TopologicalSortDirectedGraph_DFS {
                 .toArray();
 
         System.out.println(Arrays.toString(result));
-
     }
 
     private static void DFS(List<List<Integer>> adjacencyList, boolean[] isVisited, List<Integer> ans, int i) {

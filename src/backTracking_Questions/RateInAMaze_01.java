@@ -7,14 +7,11 @@ public class RateInAMaze_01 {
 
         int rows = 3;
         int cols = 3;
-
         maze2D(1, 1, rows, cols, "");
-
     }
 
     // solving using recursion:
     public static void maze2D(int startingRow, int startingCol, int endingRow, int endingCol, String result) {
-
         // base case (destination reached)
         if (startingRow == endingRow && startingCol == endingCol) {
             System.out.println(result);

@@ -1,7 +1,13 @@
 package graph_questions.BFS_questions;
 
 import java.util.*;
+/*
+Topological Sorting — Simple Definition
+Topological Sorting is an ordering of nodes in a directed graph where: A node always appears before the nodes that depend on it.
 
+Topological sorting is a linear ordering of vertices in a directed acyclic graph such that for every edge u → v, u appears before v.
+
+ */
 public class TopologicalSortDirectedGraph_BFS_Kahn_Algorithm {
     public static void main(String[] args) {
 

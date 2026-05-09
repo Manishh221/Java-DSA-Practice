@@ -1,4 +1,4 @@
-package recursion_Questions.arraysAndString;
+package recursion_Questions;
 
 public class LookAndSayPattern {
 

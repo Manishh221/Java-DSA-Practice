@@ -12,7 +12,7 @@ public class RateInAMaze_02 {
     }
 
 
-    // solving using backtracking:
+    // solving using backtracking: and using extra space:
     private static void print(int startingRow, int startingCol, int endingRow, int endingCol, String result, boolean[][] isVisited) {
         if (startingRow < 0 || startingCol < 0) return;
         if (startingRow > endingRow || startingCol > endingCol) return;

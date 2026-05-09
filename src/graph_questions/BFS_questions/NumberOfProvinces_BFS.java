@@ -34,7 +34,7 @@ public class NumberOfProvinces_BFS {
         while (!queue.isEmpty()) {
             int front = queue.remove();
             for (int j = 0; j < adjacency.length; j++) {
-                    if (adjacency[front][j] == 1 && isVisited[j]==false) {
+                    if (adjacency[front][j] == 1 && !isVisited[j]) {
                         queue.add(j);
                         isVisited[j] = true;
                 }

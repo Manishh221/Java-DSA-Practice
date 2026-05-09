@@ -17,7 +17,6 @@ public class FindEventualSafeStates {
         System.out.println("ans array: " + ans);
     }
 
-
     public static void BSF_Kahns_Algorithm(List<List<Integer>> reversedGraph, int[] indegree, List<Integer> ans){
 
         Queue<Integer> queue = new LinkedList<>();
