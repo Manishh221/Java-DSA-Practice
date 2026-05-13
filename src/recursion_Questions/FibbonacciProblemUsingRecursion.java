@@ -18,7 +18,7 @@ public class FibbonacciProblemUsingRecursion {
 
     public static void main(String[] args) {
 
-        int n = 7;
+        int n = 5;
 
         System.out.println(fib(n));
 

@@ -11,7 +11,7 @@ public class MergeTwoSortedArray {
         int a = 3;
         int b = 3;
        int ans[] = new int[a+b];
-        merge( ans,arr1, 3, arr2, b);
+        merge( ans,arr1, a, arr2, b);
         System.out.println(Arrays.toString(ans));
     }
 
